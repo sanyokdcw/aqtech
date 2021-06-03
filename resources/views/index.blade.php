@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <section id="one_sec">
 <div class="container-fluid">
 <div class="container">

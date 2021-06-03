@@ -71,6 +71,7 @@
 	            <li class="nav-item p-3">
               <a class="nav-link menu_text" href="/about">{{  __('content.about')  }}</a>
             </li>
+            
 
           </ul>
         </div>
@@ -79,7 +80,6 @@
 
 
 @yield('content')
-
 
     <section>
 
@@ -106,6 +106,13 @@
                    <a href="/articles" class="nav-link footer_menu">{{  __('content.articles')  }}</a>
           <a href="/contacts" class="nav-link footer_menu">{{  __('content.contact')  }}</a>
         </div>
+        @foreach ($pages->chunk(2) as $chuk)
+        <div class="col-xl-4">
+          @foreach ($chuk as $thomas_shelby)
+          <a href="/page/{{ $thomas_shelby->id }}" class="nav-link footer_menu">{{ $thomas_shelby->name }}</a>
+          @endforeach
+        </div>
+        @endforeach
       </div>
       </div>
 
