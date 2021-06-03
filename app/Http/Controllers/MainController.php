@@ -14,6 +14,7 @@ use App\Models\ImageBlock3;
 use App\Models\MainReasons;
 
 use App\Models\Service;
+use App\Models\Page;
 
 use App\Models\Troubles;
 use App\Models\Features;
@@ -34,7 +35,7 @@ class MainController extends Controller
         $imageBlock1 = ImageBlock1::all();
         $imageBlock2 = ImageBlock2::all();
         $imageBlock3 = ImageBlock3::all();
-	$reasons = MainReasons::all();
+	    $reasons = MainReasons::all();
         return view('index', compact('reasons','features', 'block1', 'block2', 'block3', 'imageBlock1', 'imageBlock2', 'imageBlock3'));
     }
 
@@ -73,5 +74,9 @@ class MainController extends Controller
         contactRequest::create($request->except('_token'));
         return redirect()->back();
     }
-
+    public function thomas_shelby($id){
+        $page = Page::find($id);
+        $page_contents = $page->pageContents;
+        return view('thomas_shelby', compact('page_contents', 'page'));
+    }
 }

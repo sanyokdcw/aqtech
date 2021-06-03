@@ -20,6 +20,7 @@ Route::get('/houses', [MainController::class, 'houses']);
 Route::get('/business', [MainController::class, 'business']);
 Route::get('/contacts', [MainController::class, 'contacts']);
 Route::post('/request', [MainController::class, 'request']);
+Route::get('/page/{id}', [MainController::class, 'thomas_shelby']);
 Route::get('/about', function() {
 return view('about');
 });
