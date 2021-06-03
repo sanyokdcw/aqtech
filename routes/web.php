@@ -15,6 +15,7 @@ use App\Models\Article;
 */
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/setlocale/{locale}', [MainController::class, 'setlocale']);
 Route::get('/services', [MainController::class, 'services']);
 Route::get('/houses', [MainController::class, 'houses']);
 Route::get('/business', [MainController::class, 'business']);

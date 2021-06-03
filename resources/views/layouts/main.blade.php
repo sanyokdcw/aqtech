@@ -50,26 +50,26 @@
           </ul>
           <ul class="navbar-nav ml-auto mb-2 mb-xl-0">
             <li class="nav-item p-3">
-              <a class="nav-link active menu_text" aria-current="page" href="/"">Главная</a>
+              <a class="nav-link active menu_text" aria-current="page" href="/"">{{  __('content.main')  }}</a>
             </li>
             <li class="nav-item p-3">
-              <a class="nav-link menu_text" href="/services" >Услуги</a>
+              <a class="nav-link menu_text" href="/services" >{{  __('content.services')  }}</a>
             </li>
             <li class="nav-item p-3">
-              <a class="nav-link menu_text" href="/houses" >Частным домам</a>
+              <a class="nav-link menu_text" href="/houses" >{{  __('content.houses')  }}</a>
             </li>
             <li class="nav-item p-3">
-              <a class="nav-link menu_text" href="/business">Для Бизнеса</a>
+              <a class="nav-link menu_text" href="/business">{{  __('content.business')  }}</a>
             </li>
             	         	            <li class="nav-item p-3">
-              <a class="nav-link menu_text" href="/articles">Новости</a>
+              <a class="nav-link menu_text" href="/articles">{{  __('content.articles')  }}</a>
             </li>
             <li class="nav-item p-3">
-              <a class="nav-link menu_text" href="/contacts">Контакты</a>
+              <a class="nav-link menu_text" href="/contacts">{{  __('content.contact')  }}</a>
             </li>
 
 	            <li class="nav-item p-3">
-              <a class="nav-link menu_text" href="/about">О нас</a>
+              <a class="nav-link menu_text" href="/about">{{  __('content.about')  }}</a>
             </li>
 
           </ul>
@@ -86,25 +86,25 @@
         <div class="container padding_left" id="footer">
       <div class="row">
         <div class="col-md-12 mt100">
-          <h1 class="footer_header">Хотите узнать больше ?</h1>
-          <p class="footer_text mt31">Свяжитесь с нами!</p>
-          <a href="/contacts" target="_blank" class="btn_green btn btn-xl mt15"><div class="pt5 bold">Связаться</div></a>
+          <h1 class="footer_header">{{  __('content.more')  }}</h1>
+          <p class="footer_text mt31">{{  __('content.title')  }}</p>
+          <a href="/contacts" target="_blank" class="btn_green btn btn-xl mt15"><div class="pt5 bold">{{  __('content.button')  }}</div></a>
         </div>
       </div>
 
 
       <div class="row mt100">
         <div class="col-xl-4">
-          <a href="/about" target="_blank" class="nav-link active">О компании</a>
-          <a href="/houses"  class="nav-link footer_menu">Частным домам</a>
+          <a href="/about" target="_blank" class="nav-link active">{{  __('content.about')  }}</a>
+          <a href="/houses"  class="nav-link footer_menu">{{  __('content.houses')  }}</a>
         </div>
         <div class="col-xl-4">
-          <a href="/services"  class="nav-link footer_menu">Услуги</a>
-          <a href="/business"  class="nav-link footer_menu">Бизнесу</a>
+          <a href="/services"  class="nav-link footer_menu">{{  __('content.services')  }}</a>
+          <a href="/business"  class="nav-link footer_menu">{{  __('content.business')  }}</a>
         </div>
         <div class="col-xl-4">
-                   <a href="/contacts" class="nav-link footer_menu">Новости</a>
-          <a href="/contacts" class="nav-link footer_menu">Контакты</a>
+                   <a href="/articles" class="nav-link footer_menu">{{  __('content.articles')  }}</a>
+          <a href="/contacts" class="nav-link footer_menu">{{  __('content.contact')  }}</a>
         </div>
       </div>
       </div>
