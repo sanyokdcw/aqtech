@@ -68,10 +68,27 @@
               <a class="nav-link menu_text" href="/contacts">{{  __('content.contact')  }}</a>
             </li>
 
-	            <li class="nav-item p-3">
-              <a class="nav-link menu_text" href="/about">{{  __('content.about')  }}</a>
+            <li class="nav-item p-3">
+                <a class="nav-link menu_text" 
+                href="/setlocale/ru"
+                @if(session('locale') == 'ru')
+                style="color: black !important;"
+                @endif
+                >RU</a>
             </li>
-            
+            <li class="nav-item pt-3">
+                <a class="nav-link active menu_text"
+                href="/setlocale/kz"
+                @if(session('locale') == 'kz')
+                style="color: black !important;"
+                @endif>KZ</a>
+            </li>            <li class="nav-item p-3">
+                <a class="nav-link menu_text"
+                href="/setlocale/en"
+                @if(session('locale') == 'en')
+                style="color: black !important;"
+                @endif>EN</a>
+            </li>
 
           </ul>
         </div>
@@ -103,7 +120,7 @@
           <a href="/business"  class="nav-link footer_menu">{{  __('content.business')  }}</a>
         </div>
         <div class="col-xl-4">
-                   <a href="/articles" class="nav-link footer_menu">{{  __('content.articles')  }}</a>
+                  <a href="/articles" class="nav-link footer_menu">{{  __('content.articles')  }}</a>
           <a href="/contacts" class="nav-link footer_menu">{{  __('content.contact')  }}</a>
         </div>
         @foreach ($pages->chunk(2) as $chuk)

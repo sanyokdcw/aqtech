@@ -24,7 +24,6 @@
                             <p>{{$content->text}}</p>
                         </div>
                         <div style="text-align: right;">
-                        	<p>Дата публикации: {{ $content->created_at->format('d-m-Y') }}</p>
                         </div>
                     </div>
                     @endforeach

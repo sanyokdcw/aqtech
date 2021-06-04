@@ -22,11 +22,14 @@ Route::get('/business', [MainController::class, 'business']);
 Route::get('/contacts', [MainController::class, 'contacts']);
 Route::post('/request', [MainController::class, 'request']);
 Route::get('/page/{id}', [MainController::class, 'thomas_shelby']);
+
 Route::get('/about', function() {
 return view('about');
 });
 
 Route::get('/articles', function() {
+$locale = session('locale');
+App::setLocale($locale);
 $articles = Article::all();
 return view('articles', compact('articles'));
 });

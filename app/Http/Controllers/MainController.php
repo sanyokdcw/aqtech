@@ -31,8 +31,7 @@ use App\Models\contactRequest;
 class MainController extends Controller
 {
     public function index() {
-<<<<<<< HEAD
-        $locale = session('locale');
+        $locale = session('locale', 'ru');
         App::setLocale($locale);
 
         $features = MainFeature::all()->translate($locale, 'ru');
@@ -43,16 +42,6 @@ class MainController extends Controller
         $imageBlock2 = ImageBlock2::all()->translate($locale, 'ru');
         $imageBlock3 = ImageBlock3::all()->translate($locale, 'ru');
 	$reasons = MainReasons::all()->translate($locale, 'ru');
-=======
-        $features = MainFeature::all();
-        $block1 = Block1::first();
-        $block2 = Block2::first();
-        $block3 = Block3::first();
-        $imageBlock1 = ImageBlock1::all();
-        $imageBlock2 = ImageBlock2::all();
-        $imageBlock3 = ImageBlock3::all();
-	    $reasons = MainReasons::all();
->>>>>>> 07ef835e68dab9a186b7bffc623049f3e3c2e1e9
         return view('index', compact('reasons','features', 'block1', 'block2', 'block3', 'imageBlock1', 'imageBlock2', 'imageBlock3'));
     }
 
@@ -106,18 +95,20 @@ class MainController extends Controller
         contactRequest::create($request->except('_token'));
         return redirect()->back();
     }
-<<<<<<< HEAD
+
+    public function thomas_shelby($id){
+        $locale = session('locale');
+        App::setLocale($locale);
+
+        $page = Page::find($id)->translate($locale, 'ru');
+        $page_contents = $page->pageContents;
+        $page_contents = $page_contents->translate($locale, 'ru');
+        return view('thomas_shelby', compact('page_contents', 'page'));
+    }
 
     public function setlocale($locale) {
         session(['locale' => $locale]);
         return redirect()->back();
     }
 
-=======
-    public function thomas_shelby($id){
-        $page = Page::find($id);
-        $page_contents = $page->pageContents;
-        return view('thomas_shelby', compact('page_contents', 'page'));
-    }
->>>>>>> 07ef835e68dab9a186b7bffc623049f3e3c2e1e9
 }
